@@ -1,4 +1,4 @@
-If you are are taking "Learn Ethical Hacking From Scratch | Udemy" by Zaid Sabih and using Kali 2022 x64 Customized by zSecurity 1.0.7 and TP-Link TL-WN722N v2/v3 [Realtek RTL8188EUS], you might find this helpful. In the begining, I am able to enter monitor mode. However after a few days, I found out it doesn't allow to enter monitor mode. I think  TP-Link TL-WN722N v2/v3 have automatically updated its driver. Then, I find a video from David Bombal (https://www.youtube.com/watch?v=tYnjMiTTdms) but still can't perfectly solve the issue. However, I find below steps work fine for me.
+If you are are taking TP-Link TL-WN722N v2/v3 [Realtek RTL8188EUS], you might find this helpful. In the begining, I am able to enter monitor mode. However after a few days, I found out it doesn't allow to enter monitor mode. I think  TP-Link TL-WN722N v2/v3 have automatically updated its driver. However, I find below steps work fine for me.
 
 1. sudo apt update
 2. sudo apt upgrade 
@@ -10,17 +10,14 @@ If you are are taking "Learn Ethical Hacking From Scratch | Udemy" by Zaid Sabih
 8. sudo apt-get install libelf-dev
 10. sudo apt install dkms
 11. sudo rmmod r8188eu.ko 
-12. git https://github.com/drygdryg/rtl8188eus (This works for me 😂)
-13. cd rtl8188eus
-14. sudo -i
-15. echo 'blacklist r8188eu'|sudo tee -a '/etc/modprobe.d/realtek.conf'
-16. reboot
-17. cd rtl8188eus 
-18. sudo make && make install
-19. reboot 
+12. cd rtl8188eus
+13. sudo -i
+14. echo 'blacklist r8188eu'|sudo tee -a '/etc/modprobe.d/realtek.conf'
+15. reboot
+16. cd rtl8188eus 
+17. sudo make && make install
+18. reboot 
 
-Like https://github.com/cccooo/rtl8812au-centos-7.6, forked from aircrack-ng/rtl8188eus and modified for CentOS 7.9
-as CentOS Kernel 3.10 contains many code from 4.x
 
 ## rtl8188eus v5.3.9
 
@@ -42,7 +39,7 @@ as CentOS Kernel 3.10 contains many code from 4.x
 * MESH Support
 * Monitor mode
 * Frame injection
-* Up to kernel v5.8+
+* kernel v5.18+
 ... And a bunch of various wifi chipsets
 
 # Howto build/install
