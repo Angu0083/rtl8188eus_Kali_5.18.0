@@ -50,7 +50,7 @@ If you are are taking TP-Link TL-WN722N v2/v3 [Realtek RTL8188EUS], you might fi
 5. `make && sudo make install`
 6. Reboot in order to blacklist and load the new driver/module.
 
-# MONITOR MODE howto
+# MONITOR MODE 
 Use these steps to enter monitor mode.
 ```
 $ sudo airmon-ng check kill
